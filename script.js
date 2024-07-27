@@ -1,6 +1,6 @@
-const rock = "Rock";
-const paper = "Paper";
-const scissors = "Scissors";
+const rock = "rock";
+const paper = "paper";
+const scissors = "scissors";
 let humanScore = 0;
 let computerScore = 0;
 
@@ -64,8 +64,26 @@ function playRound(humanChoice, computerChoice){
         console.log("You win!, Scissors beats Paper");
         humanScore++;
     }  
+
+    //draw 
+    if(humanChoice === computerChoice){
+        console.log("It's a draw!")
+    }
 }
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-console.log("Computer picks " + computerSelection);
-playRound(humanSelection, computerSelection);
+
+
+
+function playGame(){
+    for(let i = 0; i<5; i++ ){
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        console.log("You picked " + humanSelection);
+        console.log("Computer picks " + computerSelection);
+        playRound(humanSelection, computerSelection);
+
+        console.log("Your score: " + humanScore + " Computer's score: " + computerScore);
+        console.log("");
+    }
+}
+
+playGame();
