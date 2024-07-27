@@ -18,3 +18,13 @@ function getComputerChoice(){
 
 let computerChoice = getComputerChoice();
 console.log(computerChoice); // Outputs "Rock", "Paper", or "Scissors"
+
+
+function getHumanChoice(){
+    let choice = prompt("You feeling lucky? Rock, Paper or Scissors?");
+    choice = choice.toLowerCase();
+    return choice;
+}
+
+let humanChoice = getHumanChoice();
+console.log(humanChoice);
