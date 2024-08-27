@@ -20,14 +20,26 @@ function getComputerChoice(){
 //console.log(computerChoice); // Outputs "Rock", "Paper", or "Scissors"
 
 
-function getHumanChoice(){
-    let choice = prompt("You feeling lucky? Rock, Paper or Scissors?");
-    choice = choice.toLowerCase();
-    return choice;
-}
 
-//let humanChoice = getHumanChoice();
-//console.log(humanChoice);
+    //let choice = prompt("You feeling lucky? Rock, Paper or Scissors?");
+   let humanChoice ='';
+
+   const buttons = document.querySelectorAll('.rps-button');
+
+   buttons.forEach(button => {
+    button.addEventListener('click', () =>{
+        humanChoice = button.textContent.toLowerCase();
+        console.log(humanChoice);
+        playGame();
+    })
+   })
+
+    
+    
+    
+        
+
+
 
 
 
@@ -74,8 +86,7 @@ function playRound(humanChoice, computerChoice){
 
 
 function playGame(){
-    for(let i = 0; i<5; i++ ){
-        const humanSelection = getHumanChoice();
+        const humanSelection = humanChoice;
         const computerSelection = getComputerChoice();
         console.log("You picked " + humanSelection);
         console.log("Computer picks " + computerSelection);
@@ -83,7 +94,6 @@ function playGame(){
 
         console.log("Your score: " + humanScore + " Computer's score: " + computerScore);
         console.log("");
-    }
+    
 }
 
-playGame();
