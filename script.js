@@ -16,6 +16,7 @@ function getComputerChoice(){
     }
 }
 
+//  get human choice from button click and playgame
    let humanChoice ='';
 
    const buttons = document.querySelectorAll('.rps-button');
