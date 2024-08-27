@@ -80,6 +80,7 @@ function playRound(humanChoice, computerChoice){
 
 
 function playGame(){
+
         const humanSelection = humanChoice;
         const computerSelection = getComputerChoice();
 
